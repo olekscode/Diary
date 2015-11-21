@@ -1,0 +1,22 @@
+{
+  "name": "diary",
+  "version": "1.0.0",
+  "description": "[![Join the chat at https://gitter.im/un-olk/Diary](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/un-olk/Diary?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) To be written...",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/un-olk/Diary.git"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/un-olk/Diary/issues"
+  },
+  "homepage": "https://github.com/un-olk/Diary#readme"
+}
