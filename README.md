@@ -10,13 +10,16 @@
 |   +-- middlewares/
 |   +-- models/
 |   +-- public/
+|       +-- css/
+|       +-- img/
+|       +-- lib/   
 |   +-- tests/
 |   +-- views/
 +-- package.json
 +-- README.md
 ```
 
-### Description of **src/** structure:
+### Description of src/ structure:
 * **controllers/** – defines the app routes and their logic
 * **helpers/** – code and functionality to be shared by different parts of the project
 * **middlewares/** – Express middlewares which process the incoming requests before handling them down to the routes
