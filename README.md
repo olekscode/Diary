@@ -1,4 +1,4 @@
-# Diary [development]
+# Diary [development/authorization]
 
 ## Folder structure
 ```
