@@ -1,4 +1,4 @@
-# Diary [development]
+# Diary [development/datamanager]
 
 ## Folder structure
 ```
