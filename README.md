@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Diary [development/postmanager]
+=======
+# Diary
+>>>>>>> development
 
 ## Folder structure
 ```
