@@ -33,7 +33,7 @@ body {
 	color: green;
 }
 
-/* Create a small height at 30px */
+/* Create a small height at 20px */
 .navbar-sm {min-height:20px}
 .navbar-sm .navbar-brand,
 .navbar-sm .navbar-nav>li>a {padding-top: 7px; padding-bottom: 7px;}
@@ -42,20 +42,48 @@ body {
 .navbar-sm .navbar-toggle .icon-bar {width: 16px;}
 .navbar-sm .btn.btn-outline {margin-left: 10px;}
 
+.navbar-custom {
+    background-color: #00A37F;
+    color: #ffffff;
+    border-radius: 0;
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: transparent;
+}
+.navbar-custom .navbar-brand {
+    color: #eeeeee;
+}
+
+
+
 /* MAIN */
 .innertube {
-	margin: 15px; /* Provides padding for the content */
+	margin: 0; /* Provides padding for the content */
 }
 
 main {
 	position: fixed;
 	top: 50px; /* Set this to the height of the header */
 	bottom: 50px; /* Set this to the height of the footer */
-	left: 330px; 
+	left: 350px; 
 	right: 0;
 	overflow: auto; 
 	background: #fff;
 	margin-right: 100px;
+}
+
+.content {
+	margin-right: 50px;
+}
+
+main .btn-group {
+	display: inline;
+}
+
+main span {
+	margin-top: 20px;
+	margin-right: 5%;
 }
 
 
@@ -106,20 +134,36 @@ main {
 }
 
 
+
+/* FOOTER */
+footer {
+	margin-bottom: 100px;
+}
+
+footer ul {
+	list-style-type: none;
+    margin: 5px;
+    padding: 0;
+    overflow: hidden;
+}
+
+footer ul li {
+	float: left;
+}
+
+footer li a {
+	text-decoration: none;
+	display: block;
+    width: 60px;
+    color: #fff;
+}
+
+footer li a:hover {
+	color: #fff;
+}
+
+
+
 @media screen and (max-width: 767px) {
 
-}
-
-
-.navbar-custom {
-    background-color: #00A37F;
-    color: #ffffff;
-    border-radius: 0;
-}
-.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
-    color: #ffffff;
-    background-color: transparent;
-}
-.navbar-custom .navbar-brand {
-    color: #eeeeee;
 }
