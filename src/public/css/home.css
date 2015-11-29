@@ -55,7 +55,7 @@ body {
     color: #eeeeee;
 }
 
-
+/* HOME  PAGE*/
 
 /* MAIN */
 .innertube {
@@ -167,3 +167,6 @@ footer li a:hover {
 @media screen and (max-width: 767px) {
 
 }
+
+
+/* EDIT PAGE */
