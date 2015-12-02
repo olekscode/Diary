@@ -63,51 +63,15 @@ body {
 }
 
 
-/* LEFT */
-#left {
-	position: absolute; 
-	top: 5%; /* Set this to the height of the header */
-	bottom: 5%; /* Set this to the height of the footer */
-	left: 0; 
-	width: 300px;
-	overflow: auto; /* Scrollbars will appear on this frame only when there's enough content to require scrolling. To disable scrollbars, change to "hidden", or use "scroll" to enable permanent scrollbars */
-	background-color: #F8F8F8; 		
+/* INPUT */
+textarea.form-control:focus,
+input[type="text"]:focus,
+.uneditable-input:focus {   
+  border-color: rgba(126, 239, 104, 0.8);
+  box-shadow: 0 1px 1px #00A37F inset 0 0 8px #00A37F;
+  outline: 0 none;
 }
 
-#left ul {
-	list-style-type: none;
-	margin: auto;
-	padding: 0;
-	margin-top: 20%;
-}
-
-#left ul li {
-	margin-left: 60px;
-	padding: 4px;
-}
-
-#left ul li:hover {
-	background-color: #fff;
-}
-
-#left ul li:active {
-	color: red;
-}
-
-#left ul a {
-	color: #303333;
-	text-decoration: none;
-}
-
-#left a span {
-	color: #00A37F;
-	margin-left: 65px;
-}
-
-
-#left ul li i {
-	margin-right: 10px;
-}
 
 
 

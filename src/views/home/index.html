@@ -7,6 +7,11 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="../../public/css/home.css">
+
+
+		<script type="text/javascript">
+		var res = signin (username, password);
+		</script>
 	</head>
 
 	<body>
@@ -48,8 +53,8 @@
 
 		<main id="home-page" class="innertube">
 			<div class="content">
-				<h3>Heading</h3>
-				<p>
+				<h3 id="postTitle">Heading</h3>
+				<p id="postText">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -79,14 +84,13 @@
 	    </div>
 	  </div>
 
-		<left id="left">
+		<left id="postlist">
 			<div>
 					<ul>
 						<li><a href="#"><i class="fa fa-circle-thin"></i>Lorem ipsum dolor sit amet</a></li>
 					</ul>
 			</div>
 		</left>	
-
 
 		<footer id="footer">	
 	    <nav class="navbar navbar-custom navbar-fixed-bottom navbar-sm">
