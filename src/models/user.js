@@ -1,6 +1,6 @@
-module.exports = function (){
-	var login;
-	var password;
+module.exports = function (_login, _password){
+	var login = _login;
+	var password = _password;
 
 	//Getters and setters.
 	return{

@@ -1,8 +1,8 @@
-module.exports = function (){
-	var id;
-	var date;
-	var title;
-	var text;
+module.exports = function (_id, _date, _title, _text){
+	var id = _id;
+	var date = _date;
+	var title = _title;
+	var text = _text;
 
 	//Getters and setters.
 	return{
