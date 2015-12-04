@@ -52,9 +52,9 @@ function addPost (event) {
 		var newPost = {
 			'title': $('#addPost div input#inputTitle').val(),
 			'text': $('#addPost textarea#inputText').val()
-		}
+		};
 
-		$.ajax({
+		$.ajax ({
 			type: 'POST',
 			data: newPost,
 			url: '/posts/addpost',
@@ -70,4 +70,23 @@ function addPost (event) {
 	} else {
 		alert('Please fill in all fields');
 	}
-};
+}
+
+// Delete post button click
+$('#deleteSubmit').on('click', deletePost);
+
+// Delete post
+function deletePost (event) {
+	event.preventDefault();
+
+	$.ajax({
+		type: 'DELETE',
+		url: '/posts/deletepost' + $(this).attr('rel')
+	}).done(function(response) {
+		if(response.msg === '') {
+		} else {
+			alert('Error: ' + response.msg);
+		}
+		populateList();
+	});
+}
