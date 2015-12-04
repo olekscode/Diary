@@ -35,3 +35,39 @@ function showPostInfo (event) {
 }
 
 $('#postlist div ul').on('click', 'li a.linkshowpost', showPostInfo);
+
+
+// Add post button click
+$('#btnAddPost').on('click', addPost);
+
+// Add post
+function addPost (event) {
+	var errorCount = 0;
+	$('#addPost input').each(function (index, val) {
+		if($(this).val() === '') {
+			errorCount++;
+		}
+	});
+	if(errorCount === 0) {
+		var newPost = {
+			'title': $('#addPost div input#inputTitle').val(),
+			'text': $('#addPost textarea#inputText').val()
+		}
+
+		$.ajax({
+			type: 'POST',
+			data: newPost,
+			url: '/posts/addpost',
+			datatype: 'JSON'
+		}).done(function(response) {
+			if(response.msg === '') {
+				$('#addPost div input').val('');
+				$('#addPost textarea').val('');
+			} else {
+				alert('Error: ' + response.msg);
+			}
+		});
+	} else {
+		alert('Please fill in all fields');
+	}
+};

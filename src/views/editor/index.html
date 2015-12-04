@@ -45,11 +45,11 @@
 			<div class="content">
         <div class="col-md-12">
             <h3>Add new post!</h3>
-            <form>
+            <form id="addPost">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Title">
+                <input type="text" class="form-control" id="inputTitle" placeholder="Title">
               </div>
-              <textarea class="form-control" rows="10">
+              <textarea class="form-control" rows="10" id="inputText">
               </textarea>
             </form>
           </div><!-- /content -->
@@ -58,7 +58,7 @@
 				<br>
 				<form action="../home/index.html">
 					<button type="submit" class="btn btn-default" onclick="">Cancel</button>
-					<button type="submit" class="btn btn-success" onclick="">Submit</button>
+					<button type="submit" class="btn btn-success" id="btnAddPost" onclick="">Submit</button>
 				</form>
 			</div>
 		</main>

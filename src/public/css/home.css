@@ -22,8 +22,8 @@ body {
 	background-color: transparent; 
 }
 
-.btn.btn-default.add {
-	color: #ffffff;
+.btn.btn-default.addNewPost {
+	color: #fff;
 	margin-right: 50px;
 	font-size: 0.9em;
 	background-color: transparent;
