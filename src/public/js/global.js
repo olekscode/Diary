@@ -53,7 +53,7 @@ function addPost (event) {
 			'title': $('#addPost div input#inputTitle').val(),
 			'text': $('#addPost textarea#inputText').val()
 		};
-
+		
 		$.ajax ({
 			type: 'POST',
 			data: newPost,
