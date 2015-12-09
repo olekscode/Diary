@@ -7,7 +7,7 @@ function MongoConnect() {
 	var MongoClient = require('mongodb').MongoClient;
 	var assert      = require('assert');
 	var ObjectId    = require('mongodb').ObjectID;
-	var url         = 'mongodb://localhost:27017/DiaryDatabase';
+	var url         = 'mongodb://noussommesdiary:noussommesdiarypassword@ds027825.mongolab.com:27825/diarydatabase';//'mongodb://localhost:27017/DiaryDatabase';
 
 	// gets the array of all users from the database and applies 'callbackForUsers' function to this array;
 	this.getAllUsers = function(callbackForUsers) {
@@ -303,14 +303,9 @@ function MongoConnect() {
 			}
 		});
 	};
-
 }
 
-
-var conn = new MongoConnect();
-
-conn.removeUser("SAMPLE_USER", function(post) {
-	console.log("USER REMOVED SUCCESSFULLY");
-}, function() {
-	console.log("FAIL");
-});
+/*var conn = new MongoConnect();
+conn.getPostById(2, function(post) {
+	console.log(post.getTitle() + ' ' + post.getText());
+});*/
