@@ -1,5 +1,5 @@
-var User = require('./models/user.js');
-var Post = require('./models/post.js');
+var User = require('../models/user.js');
+var Post = require('../models/post.js');
 
 
 // Mongo connect class that provides an interface for database interaction;
@@ -309,8 +309,8 @@ function MongoConnect() {
 
 var conn = new MongoConnect();
 
-conn.getPostById(1, function(post) {
-	console.log(post.getTitle() + ' ' + post.getText());
+conn.removeUser("SAMPLE_USER", function(post) {
+	console.log("USER REMOVED SUCCESSFULLY");
 }, function() {
 	console.log("FAIL");
 });
