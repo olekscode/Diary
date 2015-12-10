@@ -90,3 +90,14 @@ function deletePost (event) {
 		populateList();
 	});
 }
+
+// Delete profile  
+$('#deleteProfile').on('click', deleteProfile);
+function deleteProfile(event) {
+	event.preventDefault();
+
+	$.ajax({
+		type: 'DELETE',
+		url: '/users/deleteuser' + $(this).attr('rel')
+	});
+}

@@ -1,7 +1,7 @@
 body {
     color: #202020;
     font-family: "Open Sans","Helvetica", Arial,sans-serif;
-    font-size: 14px;
+    font-size: 17px;
 }
 
 /* HEADER */
@@ -153,7 +153,7 @@ footer ul li {
 
 footer li a {
 	text-decoration: none;
-	display: block;
+	display: inline;
     width: 60px;
     color: #fff;
 }
@@ -162,7 +162,9 @@ footer li a:hover {
 	color: #fff;
 }
 
-
+#deleteProfile {
+	margin-left: 75%; font-size: 14px;
+}
 
 @media screen and (max-width: 767px) {
 

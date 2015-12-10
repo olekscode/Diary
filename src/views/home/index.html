@@ -28,7 +28,7 @@
 	        <div class="collapse navbar-collapse" id="navbar-collapse-2">
 	          <ul class="nav navbar-nav navbar-right">
 	          	<li>
-	          		<form action="../editor/index.html" method="post">
+	          		<form action="../editor/index.html" onclick="addPost()" method="post">
 	          			<button class="btn btn-default btn-circle addNewPost"><i class="fa fa-plus"></i></button>
 	          		</form>
 	          	</li>
@@ -82,7 +82,7 @@
 		<left id="postlist">
 			<div>
 					<ul>
-						<li><a href="#"><i class="fa fa-circle-thin"></i>Lorem ipsum dolor sit amet</a></li>
+						<li><a href="#">Lorem ipsum dolor sit amet</a></li>
 					</ul>
 			</div>
 		</left>	
@@ -93,6 +93,7 @@
 	        <div>
 			      <ul>
 						  <li><a href="#">Diary</a></li>
+						  <li id="deleteProfile">To delete your profile click <a href="../signup/index.html">here</a></li>
 						</ul>
 			    </div>
 	      </div><!-- /.container -->
