@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <style>
   body   
 { 
@@ -42,20 +43,179 @@ button
 
   <form>
     <br>
-    <input type="text" name="login" value="log in" style="border: 1px solid #AAAAAA; color: #C0C0C0; line-height: 51px; width:327px  ">
+    <input type="text" id = "i1" name="login" value="log in" style="border: 1px solid #AAAAAA; color: #C0C0C0; line-height: 51px; width:327px  ">
     <br>
     <br>
-    <input type="text" name="password" value="password"           style="border: 1px solid #AAAAAA; color: #C0C0C0; line-height: 51px; width: 327px ">
+    <input type="text" id = "i2" name="password" value="password" style="border: 1px solid #AAAAAA; color: #C0C0C0; line-height: 51px; width: 327px ">
     <br>
     <br>
-    <input type="text" name="email" value="email"           style="border: 1px solid #AAAAAA; color: #C0C0C0; line-height: 51px; width: 327px ">
+    <input type="text" id = "i3" name="email" value="email"           style="border: 1px solid #AAAAAA; color: #C0C0C0; line-height: 51px; width: 327px ">
     <br>
     <br>
-    <button style="background-color:#006E8C; color:#F7F6F6;        border:1px solid #F7F6F6; text-align: center; line-height: 51px; width: 327px">Sign Up</button>
+    <!-- added id to ajax function -->
+    <button id = "load" style="background-color:#006E8C; color:#F7F6F6;        border:1px solid #F7F6F6; text-align: center; line-height: 51px; width: 327px">Sign Up</button>
   </form>
-
+  <div id="information"></div>
   <div style="background-color:#FFFFFF; height-line: 43px; text-align:center; margin-top: 80px; width: 1350px; color:#7A7A7A"> Diary @ 2015 
   </div>
+  <!-- This is ajax script -->
+  <script type="text/javascript">
+    function funcBefore(){
+    	$("information").text ("Waiting for Data");
+    }
 
+    function funcSuccess(data){
+    	$("information").text (data);
+    }    
+
+    $(document).ready (function(){
+    	$('#load').bind("click", function(){
+    		$.ajax({
+    			// if I right understand, I must send data to authorizer 
+    			url: "../../controllers/authorizer.js",
+    			type: "POST",
+    			data: ({login: "i1", password: "i2", email: "i3"}),
+          dataType: "html",
+          beforeSend: funcBefore,
+          success: funcSuccess
+    		});
+    	});
+    });
+  </script>
+  <script type="text/javascript" src="../../public/js/global.js">
+
+     function checkForm(form)
+   {
+    if(form.login.value == "") {
+      alert("Error: Log in cannot be blank!");
+      form.login.focus();
+      return false;
+    }
+    re = /^\w+$/;
+    if(!re.test(form.login.value)) {
+      alert("Error: Log in must contain only letters, numbers and underscores!");
+      form.login.focus();
+      return false;
+    }
+
+    if(form.password1.value != "" && form.password1.value == form.password2.value) {
+      if(form.password1.value.length < 6) {
+        alert("Error: Password must contain at least six characters!");
+        form.password1.focus();
+        return false;
+      }
+      if(form.password1.value == form.login.value) {
+        alert("Error: Password must be different from log in!");
+        form.password1.focus();
+        return false;
+      }
+      re = /[0-9]/;
+      if(!re.test(form.password1.value)) {
+        alert("Error: password must contain at least one number (0-9)!");
+        form.password1.focus();
+        return false;
+      }
+      re = /[a-z]/;
+      if(!re.test(form.password1.value)) {
+        alert("Error: password must contain at least one lowercase letter (a-z)!");
+        form.password1.focus();
+        return false;
+      }
+      re = /[A-Z]/;
+      if(!re.test(form.password1.value)) {
+        alert("Error: password must contain at least one uppercase letter (A-Z)!");
+        form.password1.focus();
+        return false;
+      }
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.password1.focus();
+      return false;
+    }
+
+    alert("You entered a valid password: " + form.pwd1.value);
+    return true;
+  }
+
+  </script>
+  <script type="text/javascript" src="../../public/js/global.js">
+    window.addEventListener('load', function () {
+
+  // This variables will be used to store the form data
+  var text1 = document.getElementById("i1");;
+  var text2 = document.getElementById("i2");;
+  var text3 = document.getElementById("i3");; 
+
+
+  // The sendData function is our main function
+  function sendData() {
+  
+    // To construct our multipart form data request,
+    // We need an XMLHttpRequest instance
+    var XHR      = new XMLHttpRequest();
+
+    // And we'll store our body request as a string.
+    var data     = "";
+
+
+    // For text data, it's simpler
+    // We start a new part in our body's request
+    data += "--" + boundary + "\r\n";
+
+    // We said it's form data and give it a name
+    data += 'content-disposition: form-data; name="' + text1.name + '"\r\n';
+    // There is always a blank line between the meta-data and the data
+    data += '\r\n';
+
+    // We happen the text data to our body's request
+    data += text1.value + "\r\n";
+
+   // We said it's form data and give it a name
+    data += 'content-disposition: form-data; name="' + text2.name + '"\r\n';
+    // There is always a blank line between the meta-data and the data
+    data += '\r\n';
+
+    // We happen the text data to our body's request
+    data += text2.value + "\r\n";
+
+    // Once we are done, we "close" the body's request
+    data += "--" + boundary + "--";
+
+    // We said it's form data and give it a name
+    data += 'content-disposition: form-data; name="' + text3.name + '"\r\n';
+    // There is always a blank line between the meta-data and the data
+    data += '\r\n';
+
+    // We happen the text data to our body's request
+    data += text3.value + "\r\n";
+
+    // Once we are done, we "close" the body's request
+    data += "--" + boundary + "--";
+
+    // Once we are done, we "close" the body's request
+    data += "--" + boundary + "--";
+    
+
+   
+    // We define what will happen if the data are successfully sent
+    XHR.addEventListener('load', function(event) {
+      alert('Yeah! Data sent and response loaded.');
+    });
+
+    // We define what will happen in case of error
+    XHR.addEventListener('error', function(event) {
+      alert('Oups! Something goes wrong.');
+    });
+  }
+  // At least, We need to access our form
+  var form   = document.getElementById("form");
+
+  // to take over the submit event
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    sendData();
+  });
+});
+ </script>
 </body>
 </html>

@@ -13,3 +13,4 @@ console.log(DataManager.getPost(5));
 console.log(DataManager.updatePostText(5, "text55"));
 console.log(DataManager.updatePostTitle(5, "title55"));
 console.log(DataManager.deletePost(5));
+console.log(typeof new User("login1", "qwerty"));

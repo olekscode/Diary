@@ -1,7 +1,7 @@
 body {
     color: #202020;
     font-family: "Open Sans","Helvetica", Arial,sans-serif;
-    font-size: 17px;
+    font-size: 13px;
 }
 
 /* HEADER */
@@ -22,8 +22,8 @@ body {
 	background-color: transparent; 
 }
 
-.btn.btn-default.addNewPost {
-	color: #fff;
+.btn.btn-default.add {
+	color: #ffffff;
 	margin-right: 50px;
 	font-size: 0.9em;
 	background-color: transparent;
@@ -54,84 +54,90 @@ body {
 .navbar-custom .navbar-brand {
     color: #eeeeee;
 }
-
-/* HOME  PAGE*/
-
-/* MAIN */
-.innertube {
-	margin: 0; /* Provides padding for the content */
-}
-
-main {
-	position: fixed;
-	top: 50px; /* Set this to the height of the header */
-	bottom: 50px; /* Set this to the height of the footer */
-	left: 350px; 
-	right: 0;
-	overflow: auto; 
-	background: #fff;
-	margin-right: 100px;
-}
-
-.content {
-	margin-right: 50px;
-}
-
-main .btn-group {
-	display: inline;
-}
-
-main span {
-	margin-top: 20px;
-	margin-right: 5%;
+/* SECTION */
+section button {
+	background-color: #00A37F;
+	color: #fff;
 }
 
 
-/* LEFT */
-#postlist {
-	position: absolute; 
-	top: 5%; /* Set this to the height of the header */
-	bottom: 5%; /* Set this to the height of the footer */
-	left: 0; 
-	width: 300px;
-	overflow: auto; /* Scrollbars will appear on this frame only when there's enough content to require scrolling. To disable scrollbars, change to "hidden", or use "scroll" to enable permanent scrollbars */
-	background-color: #F8F8F8; 		
-}
 
-#postlist ul {
-	list-style-type: none;
-	margin: auto;
-	padding: 0;
-	margin-top: 20%;
-}
-
-#postlist ul li {
-	margin-left: 60px;
-	padding: 4px;
-}
-
-#postlist ul li:hover {
-	background-color: #fff;
-}
-
-#postlist ul li:active {
-	color: red;
-}
-
-#postlist ul a {
-	color: #303333;
-	text-decoration: none;
-}
-
-#postlist a span {
-	color: #00A37F;
-	margin-left: 65px;
+/* INPUT */
+textarea.form-control:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+.uneditable-input:focus {   
+  border-color: rgba(126, 239, 104, 0.8);
+  box-shadow: 0 1px 1px #00A37F inset 0 0 8px #00A37F;
+  outline: 0 none;
 }
 
 
-#postlist ul li i {
-	margin-right: 10px;
+
+
+#loginbox {
+    margin-top: 30px;
 }
+
+#loginbox > div:first-child {        
+    padding-bottom: 10px;    
+}
+
+.iconmelon {
+    display: block;
+    margin: auto;
+}
+
+#form > div {
+    margin-bottom: 25px;
+}
+
+#form > div:last-child {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.panel {    
+    background-color: transparent;
+}
+
+.panel-body {
+	margin-top: 50px;
+    padding-top: 30px;
+    background-color: rgba(2555,255,255,.3);
+}
+
+#particles {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;                        
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
+}
+
+.iconmelon,
+.im {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: block;
+  fill: #525151;
+}
+
+.iconmelon:after,
+.im:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 
 
 
@@ -153,7 +159,7 @@ footer ul li {
 
 footer li a {
 	text-decoration: none;
-	display: inline;
+	display: block;
     width: 60px;
     color: #fff;
 }
@@ -162,13 +168,10 @@ footer li a:hover {
 	color: #fff;
 }
 
-#deleteProfile {
-	margin-left: 75%; font-size: 14px;
-}
+
 
 @media screen and (max-width: 767px) {
 
 }
 
 
-/* EDIT PAGE */
