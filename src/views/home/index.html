@@ -4,8 +4,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Diary</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="">
 		<link rel="stylesheet" type="text/css" href="../../public/css/home.css">
 	</head>
 
@@ -28,7 +28,7 @@
 	        <div class="collapse navbar-collapse" id="navbar-collapse-2">
 	          <ul class="nav navbar-nav navbar-right">
 	          	<li>
-	          		<form action="../editor/index.html" method="post">
+	          		<form action="../editor/index.html" onclick="addPost()" method="post">
 	          			<button class="btn btn-default btn-circle addNewPost"><i class="fa fa-plus"></i></button>
 	          		</form>
 	          	</li>
@@ -82,7 +82,7 @@
 		<left id="postlist">
 			<div>
 					<ul>
-						<li><a href="#"><i class="fa fa-circle-thin"></i>Lorem ipsum dolor sit amet</a></li>
+						<li><a href="#">Lorem ipsum dolor sit amet</a></li>
 					</ul>
 			</div>
 		</left>	
@@ -93,6 +93,7 @@
 	        <div>
 			      <ul>
 						  <li><a href="#">Diary</a></li>
+						  <li id="deleteProfile">To delete your profile click <a href="../signup/index.html">here</a></li>
 						</ul>
 			    </div>
 	      </div><!-- /.container -->
@@ -101,8 +102,7 @@
 
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous">
-		</script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../../public/js/global.js"></script>
 	</body>
 	
