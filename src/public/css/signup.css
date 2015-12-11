@@ -1,0 +1,181 @@
+body {
+    color: #202020;
+    font-family: "Open Sans","Helvetica", Arial,sans-serif;
+    font-size: 1.6em;
+}
+
+/* HEADER */
+.navbar-nav.navbar-right .btn {
+  position: relative;
+  z-index: 2;
+  padding: 2px 15px;
+  margin: 5px auto;
+}
+
+.btn.btn-circle { 
+  border-radius: 50px; 
+}
+
+.icon-bar {
+  background-color: #F6F4F2;
+}
+
+.btn.btn-outline {
+  color: #ffffff;
+  font-size: 0.9em;
+  background-color: transparent; 
+}
+
+.btn.btn-default.add {
+  color: #ffffff;
+  margin-right: 50px;
+  font-size: 0.9em;
+  background-color: transparent;
+}
+
+.btn#add-btn {
+  color: green;
+}
+
+/* Create a small height at 20px */
+.navbar-sm {min-height:20px}
+.navbar-sm .navbar-brand,
+.navbar-sm .navbar-nav>li>a {padding-top: 7px; padding-bottom: 7px;}
+.navbar-sm .navbar-brand {height: 30px}
+.navbar-sm .navbar-toggle {margin: 3px 9px 3px 0px; padding: 4px 4px 4px 4px;}
+.navbar-sm .navbar-toggle .icon-bar {width: 16px;}
+.navbar-sm .btn.btn-outline {margin-left: 10px;}
+
+.navbar-custom {
+    background-color: #00A37F;
+    color: #ffffff;
+    border-radius: 0;
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: transparent;
+}
+.navbar-custom .navbar-brand {
+    color: #eeeeee;
+}
+/* SECTION */
+section button {
+  background-color: #00A37F;
+  color: #fff;
+}
+
+
+
+/* INPUT */
+textarea.form-control:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+.uneditable-input:focus {   
+  border-color: rgba(126, 239, 104, 0.8);
+  box-shadow: 0 1px 1px #00A37F inset 0 0 8px #00A37F;
+  outline: 0 none;
+}
+
+
+
+
+#loginbox {
+    margin-top: 30px;
+}
+
+#loginbox > div:first-child {        
+    padding-bottom: 10px;    
+}
+
+.iconmelon {
+    display: block;
+    margin: auto;
+}
+
+#form > div {
+    margin-bottom: 25px;
+}
+
+#form > div:last-child {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.panel {    
+    background-color: transparent;
+}
+
+.panel-body {
+  margin-top: 50px;
+    padding-top: 30px;
+    background-color: rgba(2555,255,255,.3);
+}
+
+#particles {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;                        
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
+}
+
+.iconmelon,
+.im {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: block;
+  fill: #525151;
+}
+
+.iconmelon:after,
+.im:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+/* FOOTER */
+footer {
+  margin-bottom: 100px;
+}
+
+footer ul {
+  list-style-type: none;
+    margin: 5px;
+    padding: 0;
+    overflow: hidden;
+}
+
+footer ul li {
+  float: left;
+}
+
+footer li a {
+  text-decoration: none;
+  display: block;
+    width: 60px;
+    color: #fff;
+}
+
+footer li a:hover {
+  color: #fff;
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+}
+
+
