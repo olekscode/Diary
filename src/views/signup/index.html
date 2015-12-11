@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
   <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,8 +53,6 @@
         </div>
       </form>
     </section>
-=======
-<head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <style>
   body   
@@ -86,138 +83,6 @@ button
     
  }
   </style>
-</head>
-<body>
-
-  <h1>
-    Diary
-    <button type="button" style=" margin-top: 17px; margin-left: 1100px; line-height:27px; width:102px;" >Log In</button> 
-  </h1>
-
-  <h2>Sign Up</h2>
-
-  <form>
-    <br>
-    <input type="text" id = "i1" name="login" value="log in" style="border: 1px solid #AAAAAA; color: #C0C0C0; line-height: 51px; width:327px  ">
-    <br>
-    <br>
-    <input type="text" id = "i2" name="password" value="password" style="border: 1px solid #AAAAAA; color: #C0C0C0; line-height: 51px; width: 327px ">
-    <br>
-    <br>
-    <input type="text" id = "i3" name="email" value="email"           style="border: 1px solid #AAAAAA; color: #C0C0C0; line-height: 51px; width: 327px ">
-    <br>
-    <br>
-    <!-- added id to ajax function -->
-    <button id = "load" style="background-color:#006E8C; color:#F7F6F6;        border:1px solid #F7F6F6; text-align: center; line-height: 51px; width: 327px">Sign Up</button>
-  </form>
-  <div id="information"></div>
-  <div style="background-color:#FFFFFF; height-line: 43px; text-align:center; margin-top: 80px; width: 1350px; color:#7A7A7A"> Diary @ 2015 
-  </div>
-  <!-- This is ajax script -->
-  <script type="text/javascript">
-    function funcBefore(){
-    	$("information").text ("Waiting for Data");
-    }
-
-    function funcSuccess(data){
-    	$("information").text (data);
-    }    
-
-    $(document).ready (function(){
-    	$('#load').bind("click", function(){
-    		$.ajax({
-    			// if I right understand, I must send data to authorizer 
-    			url: "../../controllers/authorizer.js",
-    			type: "POST",
-    			data: ({login: "i1", password: "i2", email: "i3"}),
-          dataType: "html",
-          beforeSend: funcBefore,
-          success: funcSuccess
-    		});
-    	});
-    });
-  </script>
-  <script type="text/javascript" src="../../public/js/global.js">
-
-     function checkForm(form)
-   {
-    if(form.login.value == "") {
-      alert("Error: Log in cannot be blank!");
-      form.login.focus();
-      return false;
-    }
-    re = /^\w+$/;
-    if(!re.test(form.login.value)) {
-      alert("Error: Log in must contain only letters, numbers and underscores!");
-      form.login.focus();
-      return false;
-    }
-
-    if(form.password1.value != "" && form.password1.value == form.password2.value) {
-      if(form.password1.value.length < 6) {
-        alert("Error: Password must contain at least six characters!");
-        form.password1.focus();
-        return false;
-      }
-      if(form.password1.value == form.login.value) {
-        alert("Error: Password must be different from log in!");
-        form.password1.focus();
-        return false;
-      }
-      re = /[0-9]/;
-      if(!re.test(form.password1.value)) {
-        alert("Error: password must contain at least one number (0-9)!");
-        form.password1.focus();
-        return false;
-      }
-      re = /[a-z]/;
-      if(!re.test(form.password1.value)) {
-        alert("Error: password must contain at least one lowercase letter (a-z)!");
-        form.password1.focus();
-        return false;
-      }
-      re = /[A-Z]/;
-      if(!re.test(form.password1.value)) {
-        alert("Error: password must contain at least one uppercase letter (A-Z)!");
-        form.password1.focus();
-        return false;
-      }
-    } else {
-      alert("Error: Please check that you've entered and confirmed your password!");
-      form.password1.focus();
-      return false;
-    }
-
-    alert("You entered a valid password: " + form.pwd1.value);
-    return true;
-  }
-
-  </script>
-  <script type="text/javascript" src="../../public/js/global.js">
-    window.addEventListener('load', function () {
-
-  // This variables will be used to store the form data
-  var text1 = document.getElementById("i1");;
-  var text2 = document.getElementById("i2");;
-  var text3 = document.getElementById("i3");; 
-
-
-  // The sendData function is our main function
-  function sendData() {
->>>>>>> 8434ca6bbc6d6f017cd134d20de6e43ed30e619f
-  
-
-  <footer id="footer">  
-      <nav class="navbar navbar-custom navbar-fixed-bottom navbar-sm">
-        <div class="container">
-          <div>
-            <ul>
-              <li><a href="#">Diary</a></li>
-            </ul>
-          </div>
-        </div><!-- /.container -->
-      </nav><!-- /.navbar -->
-    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous">
