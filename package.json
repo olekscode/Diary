@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/un-olk/Diary/issues"
   },
-  "homepage": "https://github.com/un-olk/Diary#readme"
+  "homepage": "https://github.com/un-olk/Diary#readme",
+  "dependencies": {
+    "mongodb": "^2.1.0"
+  }
 }
