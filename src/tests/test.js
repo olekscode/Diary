@@ -15,3 +15,4 @@ console.log(authorizer.signin('***', 'pass1'));
 console.log(authorizer.signin('Dubhcloch', 'pass1'));
 
 console.log(authorizer.signup(new User('un-olk', 'Pa$$word')));
+
