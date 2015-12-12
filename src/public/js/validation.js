@@ -19,7 +19,6 @@ function funcBefore(){
     		});
     	});
     });
-  </script>
   <script type="text/javascript" src="../../public/js/global.js">
 
      function checkForm(form)
