@@ -1,20 +1,19 @@
 var http = require("http");
+var express = require('express');
+var app = express();
 
-http.createServer(function (request, response) 
-{
-  // Send HTTP header
-  // HTTP Status 200: OK
-  // Content Type: text/plain
-  response.writeHead(200, {'Content-Type': 'text/plain'});
-  
-  // Send response body as "Hello, world!"
-  response.end(lorem());
-}).listen(8081);
+var routes = require('./controllers/routes');
 
-// Console will print the message
-console.log('Server running at http://127.0.0.1:8081/');
+// Error: 'app.router' is deprecated!
+// // Add router middleware explicitly
+// app.use(app.router);
 
+http.createServer(app).listen(3000, function() {
+	console.log('App started');
+});
 
-function lorem() {
-	return "Lorem ipsum dolor sit amet...";
-}
+console.log('Server running at http://127.0.0.1:3000/');
+
+app.get('/', routes.load);
+app.get('/signin', routes.signin);
+app.get('/signup', routes.signup);
