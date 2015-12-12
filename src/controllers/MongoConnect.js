@@ -42,7 +42,7 @@ module.exports = function DataManager() {
 			cursor.each(function(err, doc) {
 				assert.equal(err, null);
 				if (doc != null) {
-					 data.push(doc);
+					 data.push(Post(doc.id, doc.userLogin, doc.date, doc.title, doc.text));
 				} else {
 					 callback(data);
 				}
@@ -306,7 +306,20 @@ module.exports = function DataManager() {
 	};
 }
 
+<<<<<<< HEAD
+/*var conn = new MongoConnect();
+conn.getAllPosts(function(postArr) {
+	for (var i = 0; i < postArr.length; i++) {
+		console.log(postArr[i].getId() + '\n' + 
+			postArr[i].getLogin() + '\n' + 
+			postArr[i].getTitle() + '\n' + 
+			postArr[i].getDate() + '\n' + 
+			postArr[i].getText() + '\n' + '\n');
+	};
+});*/
+=======
 /*var conn = new DataManager();
 conn.getPostById(2, function(post) {
 	console.log(post.getTitle() + ' ' + post.getText());
 });*/
+>>>>>>> fbd5af80867f48aee99765e2fc29363b5a5e25fd

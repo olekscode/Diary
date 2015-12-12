@@ -42,7 +42,7 @@ module.exports = function DataManager() {
 			cursor.each(function(err, doc) {
 				assert.equal(err, null);
 				if (doc != null) {
-					 data.push(doc);
+					 data.push(Post(doc.id, doc.userLogin, doc.date, doc.title, doc.text));
 				} else {
 					 callback(data);
 				}

@@ -38,7 +38,7 @@ body {
 }
 
 /* Create a small height at 20px */
-.navbar-sm {min-height:20px}
+.navbar-sm {min-height: 20px}
 .navbar-sm .navbar-brand,
 .navbar-sm .navbar-nav>li>a {padding-top: 7px; padding-bottom: 7px;}
 .navbar-sm .navbar-brand {height: 30px}
@@ -47,7 +47,7 @@ body {
 .navbar-sm .btn.btn-outline {margin-left: 10px;}
 
 .navbar-custom {
-    background-color: #00A37F;
+    background-color: #007B85;
     color: #ffffff;
     border-radius: 0;
 }
@@ -56,11 +56,11 @@ body {
     background-color: transparent;
 }
 .navbar-custom .navbar-brand {
-    color: #eeeeee;
+    color: #fff;
 }
 /* SECTION */
 section button {
-	background-color: #00A37F;
+	background-color: #007B85;
 	color: #fff;
 }
 
@@ -71,8 +71,8 @@ textarea.form-control:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
 .uneditable-input:focus {   
-  border-color: rgba(126, 239, 104, 0.8);
-  box-shadow: 0 1px 1px #00A37F inset 0 0 8px #00A37F;
+  border-color: rgba(0, 123, 133, 0.8)
+  box-shadow: 0 1px 1px #007B85 inset 0 0 8px #007B85;
   outline: 0 none;
 }
 
@@ -174,8 +174,10 @@ footer li a:hover {
 
 
 
-@media screen and (max-width: 767px) {
-
+@media screen and (max-width: 1000px) {
+  body {
+    margin-top: 50px;
+  }
 }
 
 

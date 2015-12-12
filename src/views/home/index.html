@@ -29,7 +29,7 @@
 	          <ul class="nav navbar-nav navbar-right">
 	          	<li>
 	          		<form action="../editor/index.html" onclick="addPost()" method="post">
-	          			<button class="btn btn-default btn-circle addNewPost"><i class="fa fa-plus"></i></button>
+	          			<button class="btn btn-default btn-circle addNewPost" style="margin-left:10px;"><i class="fa fa-plus"></i></button>
 	          		</form>
 	          	</li>
 	            <li>
@@ -46,9 +46,9 @@
 
 		<br>
 
-		<main id="home-page" class="innertube">
+		<section id="home-page" class="innertube">
 			<div class="content">
-			<div class="date pull-right">Nov. 21, 2015, 12:49 a.m.</div>
+				<p class="pull-right postDate">Nov. 21, 2015, 12:49 a.m.</p>
 				<h3 id="postTitle">Heading</h3>
 				<p id="postText">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -59,11 +59,11 @@
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</p>
 			</div>
-		  <div class="btn-group pull-left">
+		  <div class="btn-group pull-left edit-delete">
 		    <button id="edit" type="submit" class="btn btn-default" onclick="window.location='../editor/index.html'"><i class="fa fa-pencil"></i></button>
 		    <button type="submit" class="btn btn-default" data-toggle="modal" data-target="#modal"><i class="fa fa-times"></i></button>
 		  </div>
-		</main>
+		</section>
 
 		<!-- Modal -->
 		<div class="modal fade" id="modal" role="dialog">
