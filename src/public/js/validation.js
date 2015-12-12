@@ -19,8 +19,7 @@ function funcBefore(){
     		});
     	});
     });
-  <script type="text/javascript" src="../../public/js/global.js">
-
+    
      function checkForm(form)
    {
     if(form.login.value == "") {
