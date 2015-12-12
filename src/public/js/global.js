@@ -29,6 +29,7 @@ function showPostInfo (event) {
 
 	var thisPostObject = postListData[arrayPosition];
 
+	$('postDate').text(thisPostObject.postDate);
 	$('postTitle').text(thisPostObject.postTitle);
 	$('postText').text(thisPostObject.postText);
 
