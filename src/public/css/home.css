@@ -12,6 +12,7 @@ body {
 	margin: 5px auto;
 }
 
+
 .icon-bar {
 	background-color: #F6F4F2;
 }
@@ -47,7 +48,7 @@ body {
 .navbar-sm .btn.btn-outline {margin-left: 10px;}
 
 .navbar-custom {
-    background-color: #00A37F;
+    background-color: #007B85;
     color: #ffffff;
     border-radius: 0;
 }
@@ -56,7 +57,7 @@ body {
     background-color: transparent;
 }
 .navbar-custom .navbar-brand {
-    color: #eeeeee;
+    color: #fff;
 }
 
 /* HOME  PAGE*/

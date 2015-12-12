@@ -92,7 +92,6 @@ function deletePost (event) {
 	});
 }
 
-<<<<<<< HEAD
 
 //forms' validation
 	
@@ -144,7 +143,6 @@ function deletePost (event) {
                 console.log("INVALID LOGIN OR PASSWORD");
             }
         };
-=======
 // Delete profile  
 $('#deleteProfile').on('click', deleteProfile);
 function deleteProfile(event) {
@@ -155,4 +153,3 @@ function deleteProfile(event) {
 		url: '/users/deleteuser' + $(this).attr('rel')
 	});
 }
->>>>>>> 8434ca6bbc6d6f017cd134d20de6e43ed30e619f
