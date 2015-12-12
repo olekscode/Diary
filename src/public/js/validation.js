@@ -6,7 +6,7 @@ function funcBefore(){
     	$("information").text (data);
     }    
 
-    $(document).ready (function(){
+    (function(){
     	$('#load').bind("click", function(){
     		$.ajax({
     			// if I right understand, I must send data to authorizer 
@@ -39,4 +39,5 @@ function funcBefore(){
         alert("Error: password and confirm password are different or password field is blank!");
         return false;
       }
-      }
+}
+     
