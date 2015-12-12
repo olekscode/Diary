@@ -1,7 +1,7 @@
 body {
     color: #202020;
     font-family: "Open Sans","Helvetica", Arial,sans-serif;
-    font-size: 1.5em;
+    font-size: 1.6em;
 }
 
 /* HEADER */
@@ -10,6 +10,10 @@ body {
 	z-index: 2;
 	padding: 2px 15px;
 	margin: 5px auto;
+}
+
+.icon-bar {
+	background-color: #F6F4F2;
 }
 
 .btn.btn-circle { 
@@ -86,6 +90,10 @@ main span {
 	margin-right: 5%;
 }
 
+.date {
+	color: #838B95;
+	font-size: 1em;
+}
 
 /* LEFT */
 #postlist {

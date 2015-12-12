@@ -1,9 +1,10 @@
 var User = require('../models/user.js');
 var Post = require('../models/post.js');
 
+// TODO: Make it a Singletone
 
 // Mongo connect class that provides an interface for database interaction;
-function MongoConnect() {
+module.exports = function DataManager() {
 	var MongoClient = require('mongodb').MongoClient;
 	var assert      = require('assert');
 	var ObjectId    = require('mongodb').ObjectID;
@@ -305,6 +306,7 @@ function MongoConnect() {
 	};
 }
 
+<<<<<<< HEAD
 /*var conn = new MongoConnect();
 conn.getAllPosts(function(postArr) {
 	for (var i = 0; i < postArr.length; i++) {
@@ -315,3 +317,9 @@ conn.getAllPosts(function(postArr) {
 			postArr[i].getText() + '\n' + '\n');
 	};
 });*/
+=======
+/*var conn = new DataManager();
+conn.getPostById(2, function(post) {
+	console.log(post.getTitle() + ' ' + post.getText());
+});*/
+>>>>>>> fbd5af80867f48aee99765e2fc29363b5a5e25fd

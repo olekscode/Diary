@@ -72,6 +72,7 @@ function addPost (event) {
 	}
 }
 
+
 // Delete post button click
 $('#deleteSubmit').on('click', deletePost);
 
@@ -91,6 +92,59 @@ function deletePost (event) {
 	});
 }
 
+<<<<<<< HEAD
+
+//forms' validation
+	
+    var _validate_login = function(login) {
+	// TODO: Forbid having a digit as a first character
+	return login.match('[^a-zA-Z0-9_\-]') == null;
+    };
+
+    var _validate_pass = function(password) {
+	// TODO: Allow using $ as in the Pa$$word
+	return password.match('[^a-zA-Z0-9_\-]') == null;
+    };
+
+    
+    var _confirm_password = function(password, passwordConfirm)
+    {
+    	console.log( passwordSignUp == passwordConfirm);
+    	return passwordSignUp == passwordConfirm;
+    };
+    
+
+    
+        // TODO: Avoid hardcoding the responses
+        // TODO: Consider using callbacks instead of passing the responses
+
+    function signInValidation() {
+		var login = document.getElementById("login").value;
+    	var password = document.getElementById("password").value;
+            if (_validate_login(login)
+             && _validate_pass(password)) {
+                    return "SUCCESS";
+            }
+            else {
+                alert( "INVALID LOGIN OR PASSWORD");
+            }
+        };
+
+   function signUpValidation() {
+    	var login = document.getElementById("login").value;
+    	var password = document.getElementById("password").value;
+    	var passwordConfirm = document.getElementById("passwordConfirm").value;
+            if (_validate_login(login)
+             && _validate_pass(password)
+             && _confirm_password(password, passwordConfirm) ) 
+            {
+                console.log("SUCCESS");        
+               }
+            else {
+                console.log("INVALID LOGIN OR PASSWORD");
+            }
+        };
+=======
 // Delete profile  
 $('#deleteProfile').on('click', deleteProfile);
 function deleteProfile(event) {
@@ -101,3 +155,4 @@ function deleteProfile(event) {
 		url: '/users/deleteuser' + $(this).attr('rel')
 	});
 }
+>>>>>>> 8434ca6bbc6d6f017cd134d20de6e43ed30e619f
